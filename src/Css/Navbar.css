@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.navbox {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.navbar {
+  background-color: #43b3ae !important;
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  color: #f6d55c;
+  flex: 1;
+  font-weight: bold;
+}
+.links a {
+  color: #f6d55c;
+  text-decoration: none;
+}
+.links {
+  gap: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.links a:hover {
+  color: #ffff;
+  transition: 1s;
+}
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.appointment-link {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.glow-btn {
+  position: relative;
+  border: none !important;
+  color: white !important;
+  background: #222 !important;   /* dark background so glow is visible */
+  font-weight: bold;
+  padding: 10px 20px;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Glowing moving border */
+.glow-btn::before {
+  content: "";
+  position: absolute;
+  inset: -3px; /* makes the border appear */
+  border-radius: inherit;
+  padding: 3px;
+  background: linear-gradient(270deg,
+    #4285F4,  /* Google Blue */
+    #EA4335,  /* Google Red */
+    #FBBC05,  /* Google Yellow */
+    #34A853,  /* Google Green */
+    #4285F4   /* back to Blue for smooth loop */
+  );
+  background-size: 300% 300%;
+  animation: moveColors 5s linear infinite;
+  /* -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; */
+  z-index: -1;
+}
+
+/* Animate the gradient */
+@keyframes moveColors {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hover effect */
+.glow-btn:hover {
+  background: #333 !important;
+}
