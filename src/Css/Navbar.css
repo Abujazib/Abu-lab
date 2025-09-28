@@ -88,3 +88,38 @@
 .glow-btn:hover {
   background: #333 !important;
 }
+.more-button{
+  color: #f6d55c !important;
+  /* width: 50%;
+  height: 50%; */
+}
+.side-bar{
+  background-color: #43b3ae !important;
+  position: fixed;
+  width: 50% !important;
+  height: 100% !important;
+  top: 0;
+  left: 0;
+}
+.side-links{
+  color: #f6d55c !important;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+}
+@media(max-width: 900px) {
+  .links{
+    display: none;
+  }
+  .glow-btn{
+    display: none !important;
+  }
+}
+@media (min-width: 901px) {
+  .more {
+    display: none !important;
+  }
+  .side-bar{
+    display: none !important;
+  }
+}
