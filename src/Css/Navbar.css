@@ -41,11 +41,32 @@
   display: flex;
   justify-content: flex-end;
 }
+.side-bar .MuiDrawer-paper {
+  background-color: #43b3ae !important;
+  width: 50%;
+  padding: 20px;
+}
+.close-button {
+  position: absolute !important;
+  top: 10px;
+  right: 10px;
+  color: #f6d55c !important;
+}
+.side-bar .links {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.side-bar .appionment-link {
+  margin-top: 500px;
+  margin-left: center;
+}
 .glow-btn {
   position: relative;
   border: none !important;
   color: white !important;
-  background: #222 !important;   /* dark background so glow is visible */
+  background: #222 !important; /* dark background so glow is visible */
   font-weight: bold;
   padding: 10px 20px;
   z-index: 1;
@@ -60,12 +81,13 @@
   inset: -3px; /* makes the border appear */
   border-radius: inherit;
   padding: 3px;
-  background: linear-gradient(270deg,
-    #4285F4,  /* Google Blue */
-    #EA4335,  /* Google Red */
-    #FBBC05,  /* Google Yellow */
-    #34A853,  /* Google Green */
-    #4285F4   /* back to Blue for smooth loop */
+  background: linear-gradient(
+    270deg,
+    #4285f4,
+    /* Google Blue */ #ea4335,
+    /* Google Red */ #fbbc05,
+    /* Google Yellow */ #34a853,
+    /* Google Green */ #4285f4 /* back to Blue for smooth loop */
   );
   background-size: 300% 300%;
   animation: moveColors 5s linear infinite;
@@ -79,39 +101,31 @@
 
 /* Animate the gradient */
 @keyframes moveColors {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Hover effect */
 .glow-btn:hover {
   background: #333 !important;
 }
-.more-button{
+.more-button {
   color: #f6d55c !important;
   /* width: 50%;
   height: 50%; */
 }
-.side-bar{
-  background-color: #43b3ae !important;
-  position: fixed;
-  width: 50% !important;
-  height: 100% !important;
-  top: 0;
-  left: 0;
-}
-.side-links{
-  color: #f6d55c !important;
-  display: flex;
-  padding: 10px;
-  flex-direction: column;
-}
-@media(max-width: 900px) {
-  .links{
+@media (max-width: 900px) {
+  .links {
     display: none;
   }
-  .glow-btn{
+  .navbox .glow-btn {
     display: none !important;
   }
 }
@@ -119,7 +133,7 @@
   .more {
     display: none !important;
   }
-  .side-bar{
+  .side-bar {
     display: none !important;
   }
 }
