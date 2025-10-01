@@ -10,6 +10,7 @@ import Button from "@mui/material/Button";
 import { FaBars } from "react-icons/fa6";
 import IconButton from "@mui/material/IconButton";
 import Drawer from "@mui/material/Drawer";
+import Abulogo from "..//assets/relogo.png"
 
 function Navbar() {
   
@@ -27,6 +28,7 @@ function Navbar() {
         <AppBar position="static" className="navbar">
           <div className="bar">
             <Toolbar className="toolbar">
+              <img src={Abulogo} alt="Abulablogo" className="logo"/>
               <Typography
                 variant="h6"
                 component="div"
@@ -62,6 +64,7 @@ function Navbar() {
                 >
                   <ClassRoundedIcon /> Book an Appoinment
                 </Button>
+                <CircularProgress color="secondary" />
               </div>
               <div className="more">
                 <IconButton className="more-button">

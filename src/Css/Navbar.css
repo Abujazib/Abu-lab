@@ -62,6 +62,11 @@
   margin-top: 500px;
   margin-left: center;
 }
+.logo {
+  height: 50px;
+  height: 50px;
+  padding-right: 5px;
+}
 .glow-btn {
   position: relative;
   border: none !important;
