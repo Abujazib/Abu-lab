@@ -1,0 +1,35 @@
+.MuiDialog-paper {
+  border: 2px solid #4285f4;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #4285f4, 0 0 30px #34a853, 
+              0 0 45px #fbbc05, 0 0 60px #ea4335;
+}
+
+.alert-box {
+  box-shadow: 0 0 15px #4285f4, 0 0 30px #34a853,
+              0 0 45px #fbbc05, 0 0 60px #ea4335;
+  padding: 10px;
+  background-color: #eaebed !important;
+  color: #006989 !important;
+  font-weight: bold;
+}
+.body-alert {
+  color: #006989 !important;
+}
+.alert-box button {
+  color: #006989;
+}
+.alert-box button:hover {
+  color: red;
+}
+@keyframes glowing {
+  0% { box-shadow: 0 0 5px #4285f4; }
+  50% { box-shadow: 0 0 20px #34a853; }
+  100% { box-shadow: 0 0 5px #4285f4; }
+}
+
+.MuiDialog-paper {
+  border: 2px solid #4285f4;
+  border-radius: 12px;
+  animation: glowing 2s infinite alternate;
+}

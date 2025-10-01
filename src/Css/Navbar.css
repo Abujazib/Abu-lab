@@ -7,7 +7,7 @@
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .navbar {
-  background-color: #43b3ae !important;
+  background-color: #006989 !important;
   display: flex;
   justify-content: space-between;
 }
@@ -42,7 +42,7 @@
   justify-content: flex-end;
 }
 .side-bar .MuiDrawer-paper {
-  background-color: #43b3ae !important;
+  background-color: #006989 !important;
   width: 50%;
   padding: 20px;
 }
