@@ -36,8 +36,8 @@ function Appionmentalert() {
             </DialogContentText>
           </DialogContent>
           <DialogActions>
-            <Button onClick={closealert}>No thank's</Button>
-            <Button onClick={gotopage}>Let's go</Button>
+            <Button onClick={closealert} sx={{color: "error.main"}}>No thank's</Button>
+            <Button onClick={gotopage} sx={{color: "success.main"}}>Let's go</Button>
           </DialogActions>
         </Box>
       </Dialog>

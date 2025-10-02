@@ -1,0 +1,10 @@
+.first{
+    background-color: #00594E !important;
+     border-radius: 0 !important; /* removes rounded corners */
+}
+.first-content{
+    color: #FFF6E4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
