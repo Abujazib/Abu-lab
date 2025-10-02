@@ -8,9 +8,10 @@ import CancelRoundedIcon from "@mui/icons-material/CancelRounded";
 import ClassRoundedIcon from "@mui/icons-material/ClassRounded";
 import Button from "@mui/material/Button";
 import { FaBars } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 import IconButton from "@mui/material/IconButton";
 import Drawer from "@mui/material/Drawer";
-import Abulogo from "..//assets/relogo.png";
+import Abulogo from "..//assets/Abulablogo.jpg";
 
 function Navbar() {
   
@@ -39,16 +40,16 @@ function Navbar() {
               </Typography>
               <div className="links">
                 <Button>
-                  <a href="">Home</a>
+                  <Link to="/">Home</Link>
                 </Button>
                 <Button>
-                  <a href="">About Us</a>
+                  <Link to="">About Us</Link>
                 </Button>
                 <Button>
-                  <a href="">Our Test</a>
+                  <Link to="">Our Test</Link>
                 </Button>
                 <Button>
-                  <a href="">Contact Us</a>
+                  <Link to="/contact-us">Contact Us</Link>
                 </Button>
               </div>
               <div className="appionment-link">
@@ -85,16 +86,16 @@ function Navbar() {
         </IconButton>
         <div className="links">
           <Button onClick={handleclose}>
-            <a href="">Home</a>
+            <Link to="/">Home</Link>
           </Button>
           <Button onClick={handleclose}>
-            <a href="">About Us</a>
+            <Link path="">About Us</Link>
           </Button>
           <Button onClick={handleclose}>
-            <a href="">Our Test</a>
+            <Link to="">Our Test</Link>
           </Button>
           <Button onClick={handleclose}>
-            <a href="">Contact Us</a>
+            <Link to="/contact-us">Contact Us</Link>
           </Button>
         </div>
         <div className="appionment-link">

@@ -66,6 +66,7 @@
   height: 50px;
   height: 50px;
   padding-right: 5px;
+  border-radius: 5px;
 }
 .glow-btn {
   position: relative;

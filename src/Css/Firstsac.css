@@ -1,10 +1,68 @@
-.first{
-    background-color: #00594E !important;
-     border-radius: 0 !important; /* removes rounded corners */
+.first {
+  background-color: #00594e !important;
+  border-radius: 0 !important; /* removes rounded corners */
+  width: 100%; /* full width of parent */
+  height: auto; /* adjusts to content */
+  box-sizing: border-box;
+  color: #fff6e4;
 }
-.first-content{
-    color: #FFF6E4;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.first-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* make columns equal height */
+  gap: 20px;
+  color: #fff6e4;
+}
+
+.first-content > * {
+  flex: 1;
+  max-width: 50%; /* each takes max 50% */
+}
+
+/* Form container */
+.form {
+  display: flex;
+  justify-content: center; /* center iframe horizontally */
+  align-items: center;     /* center iframe vertically */
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Iframe inside form */
+.appointment-frame {
+  width: 100%;    /* fill parent container */
+  height: 100%;   /* fill parent container */
+  min-height: 400px; /* minimum height */
+  border: none;
+  border-radius: 8px;
+}
+
+/* Right content */
+.content {
+  padding: 40px; /* reduced padding for better layout */
+}
+
+.content li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Mobile layout: stack and reverse order */
+@media (max-width: 900px) {
+  .first-content {
+    flex-direction: column-reverse; /* content first, form second */
+  }
+
+  .first-content > * {
+    max-width: 100%;
+  }
+
+  .content {
+    padding: 20px; /* reduce padding on mobile */
+  }
+
+  .appointment-frame {
+    height: 400px; /* fixed reasonable height on mobile */
+  }
 }
