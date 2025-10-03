@@ -9,3 +9,13 @@
   text-align: center;
   color: #233D4D;
 }
+.ca{
+  padding: 25px;
+  text-align: center;
+  color: #233D4D;
+  border: none !important;
+}
+.ca:hover{
+  background-color: #233D4D;
+  color: #ffffff;
+}
