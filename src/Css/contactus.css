@@ -8,6 +8,9 @@
   padding: 25px;
   text-align: center;
   color: #233d4d;
+  box-shadow: none !important; /* removes shadow */
+  border: none !important;     /* removes border */
+  background: transparent !important; /* removes background */
 }
 .hea-ca {
   font-weight: bold;
@@ -18,6 +21,7 @@
   text-align: center;
   color: #233d4d;
   border: none !important;
+  cursor: pointer;
 }
 .ca:hover {
   background-color: #4c9db0;
@@ -39,8 +43,8 @@
   gap: 30px; /* space between cards */
   flex-wrap: wrap; /* allows wrapping on smaller screens */
 }
-.if{
-   width: 100%;   /* makes iframe full width of parent */
+.if {
+  width: 100%; /* makes iframe full width of parent */
   height: 100vh; /* full height of viewport, or adjust as needed */
-  border: none;  /* removes border */
+  border: none; /* removes border */
 }

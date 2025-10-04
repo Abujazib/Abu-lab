@@ -8,6 +8,29 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Box from "@mui/material/Box";
 
+const points=[
+  {
+    id:1,
+    name:"Enter your personal details",
+  },
+  {
+    id:2,
+    name:"Provide your WhatsApp number (for communication)",
+  },
+  {
+    id:3,
+    name:"Fill in your full address",
+  },
+  {
+    id:4,
+    name:"Choose an available slot",
+  },
+  {
+    id:5,
+    name:"Add your doctor's name (if applicable)",
+  },
+];
+
 function Appionmentalert() {
   const [openalert, setOpenalert] = useState(true);
   const closealert = () => {
@@ -37,13 +60,11 @@ function Appionmentalert() {
               preferred date and time for a home visit. <br /> <br/> Please make sure
               you have a stable internet connection. <br /> <br/> To book your
               appointment, follow these steps: <br /> <br/>
-              <ol>
-                <li>Enter your personal details</li>
-                <li>Provide your WhatsApp number (for communication)</li>
-                <li>Fill in your full address</li>
-                <li>Choose an available slot</li>
-                <li>Add your doctor's name (if applicable)</li>
+              {points.map((iteam)=>(
+              <ol key={iteam.id}>
+                <li>{iteam.name}</li>
               </ol>
+              ))}
             </DialogContentText>
           </DialogContent>
           <DialogActions>

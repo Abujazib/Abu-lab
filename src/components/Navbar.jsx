@@ -8,15 +8,14 @@ import CancelRoundedIcon from "@mui/icons-material/CancelRounded";
 import ClassRoundedIcon from "@mui/icons-material/ClassRounded";
 import Button from "@mui/material/Button";
 import { FaBars } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
 import Drawer from "@mui/material/Drawer";
 import Abulogo from "..//assets/Abulablogo.jpg";
 
 function Navbar() {
-  
-  const [open,setOpen]= useState(false);
-  const handleopen = () =>{
+  const [open, setOpen] = useState(false);
+  const handleopen = () => {
     setOpen(true);
   };
   const handleclose = () => {
@@ -29,7 +28,8 @@ function Navbar() {
         <AppBar position="static" className="navbar">
           <div className="bar">
             <Toolbar className="toolbar">
-              <img src={Abulogo} alt="Abulablogo" className="logo"/>
+              <img src={Abulogo} alt="Abulablogo" className="logo" />
+              &nbsp;
               <Typography
                 variant="h6"
                 component="div"
@@ -68,7 +68,7 @@ function Navbar() {
               </div>
               <div className="more">
                 <IconButton className="more-button">
-                  <FaBars onClick={handleopen}/>
+                  <FaBars onClick={handleopen} />
                 </IconButton>
               </div>
             </Toolbar>
