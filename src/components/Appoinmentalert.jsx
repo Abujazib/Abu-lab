@@ -61,9 +61,9 @@ function Appionmentalert() {
               you have a stable internet connection. <br /> <br/> To book your
               appointment, follow these steps: <br /> <br/>
               {points.map((iteam)=>(
-              <ol key={iteam.id}>
+              <ul key={iteam.id}>
                 <li>{iteam.name}</li>
-              </ol>
+              </ul>
               ))}
             </DialogContentText>
           </DialogContent>

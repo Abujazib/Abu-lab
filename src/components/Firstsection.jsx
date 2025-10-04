@@ -18,14 +18,10 @@ const list = [
   },
   {
     id: 4,
-    name: "Doctor Reference - Option to add your doctor's name for personalized care.",
-  },
-  {
-    id: 5,
     name: "Hassle-free Process - Simple form, secure booking, quick confirmation.",
   },
   {
-    id: 6,
+    id: 5,
     name: "Anywhere, Anytime - Book appointments online from any device.",
   },
 ];
