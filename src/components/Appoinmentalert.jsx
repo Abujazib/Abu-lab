@@ -7,29 +7,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Box from "@mui/material/Box";
-
-const points=[
-  {
-    id:1,
-    name:"Enter your personal details",
-  },
-  {
-    id:2,
-    name:"Provide your WhatsApp number (for communication)",
-  },
-  {
-    id:3,
-    name:"Fill in your full address",
-  },
-  {
-    id:4,
-    name:"Choose an available slot",
-  },
-  {
-    id:5,
-    name:"Add your doctor's name (if applicable)",
-  },
-];
+import { points } from "..//uidata/Appoinmentdata";
 
 function Appionmentalert() {
   const [openalert, setOpenalert] = useState(true);
