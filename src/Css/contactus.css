@@ -33,7 +33,8 @@
   flex-direction: column;
   align-items: center; /* centers icon + text inside each card */
   text-align: center;
-  color: #6dc7d1;
+  color: #233d4d;
+  background-color: #ffff;
   cursor: pointer;
 }
 .social-container {
@@ -42,6 +43,7 @@
   align-items: center; /* center vertically (if needed) */
   gap: 30px; /* space between cards */
   flex-wrap: wrap; /* allows wrapping on smaller screens */
+  background-color: #ffff;
 }
 .if {
   width: 100%; /* makes iframe full width of parent */

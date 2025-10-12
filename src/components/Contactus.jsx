@@ -40,7 +40,7 @@ function Contantus() {
               sx={{ boxShadow: "none", border: "none" }}
               className="soc-cla"
             >
-              <CardContent className="soc" sx={{color:"info.main","&:hover":{color:"success.main"}}}>
+              <CardContent className="soc" sx={{color: "info.main", '&:hover':{color: "sucess.main"},}}>
                 <Typography>{iteam.icon}</Typography>
                 <Typography onClick={() => window.open(iteam.url, "_blank")}>
                   {iteam.head}

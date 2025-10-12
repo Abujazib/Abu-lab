@@ -5,6 +5,11 @@ import CallIcon from "@mui/icons-material/Call";
 import TimerIcon from "@mui/icons-material/Timer";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 
+const phone1 = import.meta.env.VITE_PHONE_1;
+const phone2 = import.meta.env.VITE_PHONE_2;
+const email = import.meta.env.VITE_EMAIL;
+
+
 export const cardData = [
   {
     id: 1,
@@ -18,15 +23,15 @@ export const cardData = [
     id: 2,
     icon: <CallIcon />,
     heading: "Call Us",
-    description: "12345 67890, 12345 67890",
-    url:"tel:+911234567890"
+    description: phone1 + "  " + "&" + "  " + phone2,
+    url: `tel:${phone1}`,
   },
   {
     id: 3,
     icon: <EmailRoundedIcon />,
     heading: "Write Us to",
-    description: "youexample@gmail.com",
-    url: "mailto:youexample@gmail.com",
+    description: email,
+    url: `mailto:${email}`,
   },
   {
     id: 4,
