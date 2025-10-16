@@ -13,7 +13,7 @@ function Contantus() {
       <div className="title-con">
         <h1>CONTACT US</h1>
       </div>
-      <Card className="title-bo" sx={{fontFamily:"Noto Serif", fontWeight:"bold"}}>
+      <Card className="title-bo" sx={{fontFamily:"Open Sans", fontWeight:"bold"}}>
         <h1>We Are Here For You</h1>
       </Card>
       <div>
@@ -25,12 +25,12 @@ function Contantus() {
           >
             <CardContent>
               <Typography sx={{ fontSize: "25px" }}>{iteam.icon}</Typography>
-              <Typography variant="h6" sx={{fontWeight:"bold", fontFamily:"Noto Serif"}}>{iteam.heading}</Typography>
+              <Typography variant="h6" sx={{fontWeight:"bold", fontFamily:"Open Sans"}}>{iteam.heading}</Typography>
               <Typography variant="subtitle1" onClick={()=>(window.open(iteam.url,"_blank"))}>{iteam.description}</Typography>
             </CardContent>
           </Card>
         ))}
-        <Card className="title-bo" sx={{fontFamily:"Noto serif", fontWeight:"bold"}}>
+        <Card className="title-bo" sx={{fontFamily:"Open Sans", fontWeight:"bold"}}>
           <h1>Follow Us On</h1>
         </Card>
         <div className="social-container">
@@ -50,7 +50,7 @@ function Contantus() {
           ))}
         </div>
       </div>
-      <Card className="title-bo" sx={{fontFamily:"Noto serif", fontWeight:"bold"}}>
+      <Card className="title-bo" sx={{fontFamily:"Open Sans", fontWeight:"bold"}}>
         <h1>Fill this form Appoinment</h1>
         <br />
         <Typography sx={{ color: "#00000" }}>

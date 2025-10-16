@@ -33,7 +33,7 @@ function Navbar() {
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ flexGrow: 1, fontFamily:"Playfair Display" }}
+                sx={{ flexGrow: 1, fontFamily:"Open Sans" }}
                 className="title"
               >
                 Abu Laboratory

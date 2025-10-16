@@ -1,9 +1,18 @@
-.log-div{
-    margin-top: center;
-    align-items: center;
+.log-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+.but-log{
     text-align: center;
 }
-.logo-lo{
-    height: 200px;
-    width: 200px;
+.logo-lo {
+  width: 200px;
+}
+.logca {
+  margin-top: 20px;
+  padding: 20px;
+  width: 350px;
+  text-align: center;
 }

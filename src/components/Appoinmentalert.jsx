@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "..//Css/Appoinmentalert.css";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
@@ -10,10 +10,21 @@ import Box from "@mui/material/Box";
 import { points } from "..//uidata/Appoinmentdata";
 
 function Appionmentalert() {
-  const [openalert, setOpenalert] = useState(true);
+  const [openalert, setOpenalert] = useState(false);
+
+  useEffect(() => {
+    const shownBefore = localStorage.getItem("appointmentAlertShown");
+
+    if (!shownBefore) {
+      setOpenalert(true);
+      localStorage.setItem("appointmentAlertShown", "true"); 
+    }
+  }, []);
+
   const closealert = () => {
     setOpenalert(false);
   };
+
   const gotopage = () => {
     window.open("https://abulab-79efc.web.app/appointments", "_blank");
     setOpenalert(false);
@@ -35,13 +46,13 @@ function Appionmentalert() {
               className="body-alert"
             >
               We'll take you to the appointment portal where you can choose your
-              preferred date and time for a home visit. <br /> <br/> Please make sure
-              you have a stable internet connection. <br /> <br/> To book your
-              appointment, follow these steps: <br /> <br/>
-              {points.map((iteam)=>(
-              <ul key={iteam.id}>
-                <li>{iteam.name}</li>
-              </ul>
+              preferred date and time for a home visit. <br /> <br /> Please
+              make sure you have a stable internet connection. <br /> <br /> To
+              book your appointment, follow these steps: <br /> <br />
+              {points.map((iteam) => (
+                <ul key={iteam.id}>
+                  <li>{iteam.name}</li>
+                </ul>
               ))}
             </DialogContentText>
           </DialogContent>
