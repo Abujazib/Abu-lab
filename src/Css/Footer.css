@@ -7,3 +7,10 @@
   align-items: flex-start; /* align links to the left (or use center if you prefer) */
   gap: 10px;               /* space between each link */
 }
+.links-fa a{
+  color: #ffff;
+  text-decoration: none;
+}
+.links-fa a:hover{
+  color: #ffebaf;
+}
