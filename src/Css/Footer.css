@@ -10,7 +10,20 @@
 .links-fa a{
   color: #ffff;
   text-decoration: none;
+  text-align: center;
 }
 .links-fa a:hover{
-  color: #ffebaf;
+  color: #f6d55c;
+}
+@media (max-width: 901px) {
+.card-con {
+    flex-direction: column;    /* Stack vertically */
+    align-items: center;       /* Center all items */
+    text-align: center;        /* Center text inside */
+    gap: 20px;                 /* Space between sections */
+  }
+  .links-fa {
+    margin-top: 10px;
+    gap: 15px;
+  }
 }
