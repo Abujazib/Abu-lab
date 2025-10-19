@@ -8,6 +8,9 @@ import CancelRoundedIcon from "@mui/icons-material/CancelRounded";
 import ClassRoundedIcon from "@mui/icons-material/ClassRounded";
 import Button from "@mui/material/Button";
 import { FaBars } from "react-icons/fa6";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Link } from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
 import Drawer from "@mui/material/Drawer";
@@ -21,6 +24,18 @@ function Navbar() {
   const handleclose = () => {
     setOpen(false);
   };
+  const [anchorEl, setAnchorEl] = useState(null); // holds button element
+  const openmu = Boolean(anchorEl); // true if menu is open
+
+  // when button clicked
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  // when menu closes
+  const handleClosemu = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <>
@@ -33,7 +48,7 @@ function Navbar() {
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ flexGrow: 1, fontFamily:"Open Sans" }}
+                sx={{ flexGrow: 1, fontFamily: "Open Sans" }}
                 className="title"
               >
                 Abu Laboratory
@@ -51,6 +66,23 @@ function Navbar() {
                 <Button>
                   <Link to="/contact-us">Contact Us</Link>
                 </Button>
+                <Button onClick={handleClick} sx={{color:"#f6d55c"}}>
+                  Form <ExpandMoreIcon />
+                </Button>
+                <Menu anchorEl={anchorEl} open={openmu} onClose={handleClosemu}>
+                  <MenuItem
+                    onClick={() => {
+                      handleClosemu,
+                        window.open(
+                          "https://abulab-79efc.web.app/appointments",
+                          "_blank"
+                        );
+                    }}
+                  >
+                    Book an Appoinment
+                  </MenuItem>
+                  <MenuItem onClick={handleClosemu}>Call Back</MenuItem>
+                </Menu>
               </div>
               <div className="appionment-link">
                 <Button
@@ -97,6 +129,23 @@ function Navbar() {
           <Button onClick={handleclose}>
             <Link to="/contact-us">Contact Us</Link>
           </Button>
+          <Button onClick={handleClick} sx={{color:"#f6d55c"}}>
+            Form <ExpandMoreIcon />
+          </Button>
+          <Menu anchorEl={anchorEl} open={openmu} onClose={handleClosemu}>
+            <MenuItem
+              onClick={() => {
+                handleClosemu,
+                  window.open(
+                    "https://abulab-79efc.web.app/appointments",
+                    "_blank"
+                  );
+              }}
+            >
+              Book an Appoinment
+            </MenuItem>
+            <MenuItem onClick={handleClosemu}>Call Back</MenuItem>
+          </Menu>
         </div>
         <div className="appionment-link">
           <Button
