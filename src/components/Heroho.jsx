@@ -17,7 +17,7 @@ function Heroho() {
       <div className="her-fir">
         <Typography variant="h4" sx={{ color: "#EFE9E0" }}>
           <TypeAnimation
-            sequence={["Abu Labs", 500, "Abu Digital X-Ray, ECG &  Lab", 500]}
+            sequence={["Abu Labs", 2000, "Abu Digital X-Ray, ECG &  Lab", 2000]}
             typeSpeed={50}
             backSpeed={30}
             repeat={Infinity}

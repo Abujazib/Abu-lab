@@ -1,49 +1,50 @@
-*{
-  font-family: "Open Sans", serif;
-}
 .first {
   background-color: #00594e !important;
-  border-radius: 0 !important; /* removes rounded corners */
-  width: 100%; /* full width of parent */
-  height: auto; /* adjusts to content */
+  border-radius: 0 !important;
+  width: 100%;
+  height: auto;
   box-sizing: border-box;
-  color: #fff6e4;
+  color: #fff6e4 !important;
 }
 
+/* Parent container for two columns */
 .first-content {
   display: flex;
   justify-content: space-between;
   align-items: stretch; /* make columns equal height */
   gap: 20px;
-  color: #fff6e4;
 }
 
+/* Each column gets 50% width */
 .first-content > * {
   flex: 1;
-  max-width: 50%; /* each takes max 50% */
+  width: 50%;
+  max-width: 50%;
 }
 
-/* Form container */
+/* Form section */
 .form {
   display: flex;
-  justify-content: center; /* center iframe horizontally */
-  align-items: center;     /* center iframe vertically */
+  flex-direction: column;
+  justify-content: center; /* center iframe vertically */
+  align-items: stretch;    /* stretch iframe to full width */
+  height: 100%;
   box-sizing: border-box;
   padding: 0;
 }
 
-/* Iframe inside form */
+/* Iframe styling */
 .appointment-frame {
-  width: 100%;    /* fill parent container */
-  height: 100%;   /* fill parent container */
-  min-height: 400px; /* minimum height */
+  width: 350%;
+  height: 100%;
+  min-height: 500px;  /* enough height to show content */
   border: none;
   border-radius: 8px;
 }
 
-/* Right content */
+/* Right content section */
 .content {
-  padding: 40px; /* reduced padding for better layout */
+  padding: 40px;
 }
 
 .content li {
@@ -51,21 +52,27 @@
   margin-bottom: 10px;
 }
 
-/* Mobile layout: stack and reverse order */
+/* Mobile: stack vertically (content first, form below) */
 @media (max-width: 900px) {
   .first-content {
-    flex-direction: column-reverse; /* content first, form second */
+    flex-direction: column-reverse;
   }
 
   .first-content > * {
+    width: 100%;
     max-width: 100%;
   }
 
-  .content {
-    padding: 20px; /* reduce padding on mobile */
+  .form {
+    align-items: center;
   }
 
   .appointment-frame {
-    height: 400px; /* fixed reasonable height on mobile */
+    width: 180%;
+    height: 450px; /* fixed height for small screens */
+  }
+
+  .content {
+    padding: 20px;
   }
 }

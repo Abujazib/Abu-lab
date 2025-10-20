@@ -40,7 +40,7 @@ function Navbar() {
   return (
     <>
       <Box sx={{ flexGrow: 1 }} className="navbox">
-        <AppBar position="static" className="navbar">
+        <AppBar position="fixed" className="navbar">
           <div className="bar">
             <Toolbar className="toolbar">
               <img src={Abulogo} alt="Abulablogo" className="logo" />
@@ -67,7 +67,7 @@ function Navbar() {
                   <Link to="/contact-us">Contact Us</Link>
                 </Button>
                 <Button onClick={handleClick} sx={{color:"#f6d55c"}}>
-                  Form <ExpandMoreIcon />
+                  Schedule Now <ExpandMoreIcon />
                 </Button>
                 <Menu anchorEl={anchorEl} open={openmu} onClose={handleClosemu}>
                   <MenuItem
@@ -81,7 +81,7 @@ function Navbar() {
                   >
                     Book an Appoinment
                   </MenuItem>
-                  <MenuItem onClick={handleClosemu}>Call Back</MenuItem>
+                  <MenuItem onClick={handleClosemu}><Link to="/cal-back-form">Call Back</Link></MenuItem>
                 </Menu>
               </div>
               <div className="appionment-link">
@@ -130,7 +130,7 @@ function Navbar() {
             <Link to="/contact-us">Contact Us</Link>
           </Button>
           <Button onClick={handleClick} sx={{color:"#f6d55c"}}>
-            Form <ExpandMoreIcon />
+            Schedule Now <ExpandMoreIcon />
           </Button>
           <Menu anchorEl={anchorEl} open={openmu} onClose={handleClosemu}>
             <MenuItem
@@ -144,7 +144,7 @@ function Navbar() {
             >
               Book an Appoinment
             </MenuItem>
-            <MenuItem onClick={handleClosemu}>Call Back</MenuItem>
+            <MenuItem onClick={handleClosemu}><Link to="/cal-back-form">Call Back</Link></MenuItem>
           </Menu>
         </div>
         <div className="appionment-link">
