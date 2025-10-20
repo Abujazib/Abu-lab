@@ -62,3 +62,21 @@ export const socialMedia = [
     name:"Facebook",
   },
 ];
+export const heroHome=[
+  {
+    id:"1",
+    name:"Accurate. Reliable. Certified."
+  },
+    {
+    id:"2",
+    name:"ISO & CMC Certified Laboratory."
+  },
+      {
+    id:"3",
+    name:"Where Accuracy Meets Care."
+  },
+        {
+    id:"4",
+    name:"Precision in Every Report."
+  },
+]

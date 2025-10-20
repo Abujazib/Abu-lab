@@ -3,6 +3,7 @@ import Nabar from "../components/Navbar";
 import Appoinmentalert from "../components/Appoinmentalert";
 import Firstsection from "../components/Firstsection";
 import Footer from "../components/Footer";
+import Heroho from "../components/Heroho";
 
 function Home() {
 
@@ -10,6 +11,7 @@ function Home() {
     <>
       <Nabar />
       <Appoinmentalert />
+      <Heroho/>
       <Firstsection />
       <Footer/>
     </>
