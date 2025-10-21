@@ -8,16 +8,11 @@ import { heroHome } from "..//uidata/Contactdata"
 
 function Heroho() {
   return (
-    <Card
-      className="hero"
-      sx={{
-        backgroundColor: "#0F9E99",
-      }}
-    >
+    <Card className="hero">
       <div className="her-fir">
-        <Typography variant="h4" sx={{ color: "#EFE9E0" }}>
+        <Typography variant="h4" sx={{ color: "#FCFAEE" }}>
           <TypeAnimation
-            sequence={["Abu Labs", 2000, "Abu Digital X-Ray, ECG &  Lab", 2000]}
+            sequence={["Abu Labs", 2000, "Abu Digital X-Ray, ECG &  Labs", 2000]}
             typeSpeed={50}
             backSpeed={30}
             repeat={Infinity}
@@ -25,14 +20,14 @@ function Heroho() {
         </Typography>
         <Typography
           variant="subtitle1"
-          sx={{ marginTop: "5px", color: "#f6d55c", fontWeight: "bold" }}
+          sx={{ marginTop: "5px", color: "#1E3C65", fontWeight: "bold" }}
         >
           We Care Your Health
         </Typography>
-        <Typography sx={{color:"#EFE9E0"}} variant="h6">
+        <Typography sx={{color:"#FCFAEE"}} variant="h6">
             Welcome to Abu Digital X-Ray, ECG & Lab
         </Typography>
-        <Typography variant="h6" sx={{ color: "#f6d55c", marginLeft:"20px" }}>
+        <Typography variant="h6" sx={{ color: "#1E3C65", marginLeft:"20px" }}>
         {heroHome.map((iteam) =>(<ul key={iteam.id}>
             <li>{iteam.name}</li>
         </ul>))}

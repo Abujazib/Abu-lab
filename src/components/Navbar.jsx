@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
 import Drawer from "@mui/material/Drawer";
 import Abulogo from "..//assets/Abulablogo.jpg";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -65,23 +66,23 @@ function Navbar() {
                 </Button>
                 <Button>
                   <Link to="/contact-us">Contact Us</Link>
-                </Button>
-                <Button onClick={handleClick} sx={{color:"#f6d55c"}}>
-                  Schedule Now <ExpandMoreIcon />
-                </Button>
-                <Menu anchorEl={anchorEl} open={openmu} onClose={handleClosemu}>
-                  <MenuItem
-                    onClick={() => {
+                  {/* onClick={() => {
                       handleClosemu,
                         window.open(
                           "https://abulab-79efc.web.app/appointments",
                           "_blank"
                         );
-                    }}
-                  >
-                    Book an Appoinment
-                  </MenuItem>
-                  <MenuItem onClick={handleClosemu}><Link to="/cal-back-form">Call Back</Link></MenuItem>
+                    }} */}
+                </Button>
+                <IconButton
+                  onClick={handleClick}
+                  sx={{ color: "white", "&:hover": { color: "#f6d55c" } }}
+                >
+                  {open ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                </IconButton>
+
+                <Menu anchorEl={anchorEl} open={open} onClose={handleClosemu}>
+                  
                 </Menu>
               </div>
               <div className="appionment-link">
@@ -129,7 +130,7 @@ function Navbar() {
           <Button onClick={handleclose}>
             <Link to="/contact-us">Contact Us</Link>
           </Button>
-          <Button onClick={handleClick} sx={{color:"#f6d55c"}}>
+          <Button onClick={handleClick} sx={{ color: "#f6d55c" }}>
             Schedule Now <ExpandMoreIcon />
           </Button>
           <Menu anchorEl={anchorEl} open={openmu} onClose={handleClosemu}>
@@ -144,7 +145,9 @@ function Navbar() {
             >
               Book an Appoinment
             </MenuItem>
-            <MenuItem onClick={handleClosemu}><Link to="/cal-back-form">Call Back</Link></MenuItem>
+            <MenuItem onClick={handleClosemu}>
+              <Link to="/cal-back-form">Call Back</Link>
+            </MenuItem>
           </Menu>
         </div>
         <div className="appionment-link">

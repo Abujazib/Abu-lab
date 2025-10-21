@@ -45,7 +45,10 @@ function Footer() {
           {contactItems.map((iteam) => (
             <Tooltip key={iteam.id} title={iteam.name}>
               <IconButton
-                sx={{ color: "white", "&:hover": { color: "#f6d55c", transition:"1s" } }}
+                sx={{
+                  color: "white",
+                  "&:hover": { color: "#f6d55c", transition: "1s" },
+                }}
                 onClick={() => window.open(iteam.url, "_blank")}
               >
                 {iteam.icon}
@@ -58,7 +61,10 @@ function Footer() {
           {socialMedia.map((iteam) => (
             <Tooltip title={iteam.name}>
               <IconButton
-                sx={{ color: "white", "&:hover": { color: "#f6d55c", transition:"1s" } }}
+                sx={{
+                  color: "white",
+                  "&:hover": { color: "#f6d55c", transition: "1s" },
+                }}
                 onClick={() => window.open(iteam.url, "_blank")}
               >
                 {iteam.icon}
@@ -68,11 +74,38 @@ function Footer() {
         </CardContent>
         <CardContent>
           <h2>Officially Certified By</h2>
-          <Typography sx={{ color: "#ffff", "&:hover": { color: "#f6d55c", transition:"1s" } }}>
+          <Typography
+            sx={{
+              color: "#ffff",
+              "&:hover": { color: "#f6d55c", transition: "1s" },
+            }}
+          >
             <RiVerifiedBadgeFill />
-            &nbsp;ISO 9001:2015 Certified Laboratory <br /> <RiVerifiedBadgeFill />
+            &nbsp;ISO 9001:2015 Certified Laboratory <br />{" "}
+            <RiVerifiedBadgeFill />
             &nbsp;CMC Vellore Certified for Quality Testing
           </Typography>
+        </CardContent>
+        <CardContent
+          sx={{
+            color: "#f6d55c",
+            display: "flex",
+            flexDirection: "column",
+          }}
+          className="fot-cal"
+        >
+          <h2>Schedule Now</h2>
+          <a
+            onClick={() => {
+              window.open(
+                "https://abulab-79efc.web.app/appointments",
+                "_blank"
+              );
+            }}
+          >
+            Book an Appoinment
+          </a>
+          <Link to="/cal-back-form">Call Back</Link>
         </CardContent>
       </Card>
       <Card
