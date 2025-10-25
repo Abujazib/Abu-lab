@@ -1,0 +1,55 @@
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #006989;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f6d55c;
+  z-index: 9999;
+  animation: fadeOut 0.5s ease-in-out 2s forwards; /* fade out after 2s */
+}
+
+.splash-logo {
+  width: 150px;
+  height: auto;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+.splash-title {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Noto Serif", serif;
+  margin-bottom: 10px;
+}
+
+.splash-tagline {
+  font-size: 18px;
+  font-style: italic;
+  color: #fff6e4;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
