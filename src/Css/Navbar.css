@@ -12,6 +12,10 @@
   display: flex;
   justify-content: space-between;
 }
+.Menu{
+  color: #f6d55c !important;
+  text-decoration: none;
+}
 .title {
   color: #f6d55c;
   flex: 1;
