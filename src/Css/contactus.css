@@ -1,6 +1,9 @@
 *{
   font-family: "Open Sans", serif;
 }
+.contact-page{
+    margin-top: 50px;
+}
 .title-con {
   color: #e2f3f4;
   padding: 25px;

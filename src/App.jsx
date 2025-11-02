@@ -4,6 +4,7 @@ import Home from "..//src/page/Home";
 import Loginpage from "./Page/Loginpage";
 import Contactuspa from "./page/Contactuspa";
 import Callback from "./components/Callback";
+import Ourtestpa from "./page/Ourtestpa";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/cal-back-form" element={<Callback />} />
+        </Routes>
+        <Routes>
+          <Route path="/our-test" element={<Ourtestpa />} />
         </Routes>
       </BrowserRouter>
     </>

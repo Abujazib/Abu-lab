@@ -62,7 +62,7 @@ function Navbar() {
                   <Link to="">About Us</Link>
                 </Button>
                 <Button>
-                  <Link to="">Our Test</Link>
+                  <Link to="/our-test">Our Test</Link>
                 </Button>
                 <Button>
                   <Link to="/contact-us">Contact Us</Link>
@@ -115,7 +115,7 @@ function Navbar() {
             <Link path="">About Us</Link>
           </Button>
           <Button onClick={handleclose}>
-            <Link to="">Our Test</Link>
+            <Link to="/our-test">Our Test</Link>
           </Button>
           <Button onClick={handleclose}>
             <Link to="/contact-us">Contact Us</Link>

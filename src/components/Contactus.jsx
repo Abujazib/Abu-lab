@@ -9,7 +9,7 @@ import { cardData, socialMedia } from "../uidata/Contactdata";
 
 function Contantus() {
   return (
-    <>
+    <div className="contact-page">
       <div className="title-con">
         <h1>CONTACT US</h1>
       </div>
@@ -68,7 +68,7 @@ function Contantus() {
         src="https://abulab-79efc.web.app/appointments"
         className="if"
       ></iframe>
-    </>
+    </div>
   );
 }
 
